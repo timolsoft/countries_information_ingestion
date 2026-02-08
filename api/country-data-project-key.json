@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "country-data-project-485122",
+  "private_key_id": "0de631c520a98584190368af32883650ca6f9dfa",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCo9VPz5p884FPA\n49gWRp42OufESlIlvPrgKrtAnAs07xGNRTepkfOZslZIlA9OGXFueZPjd0PhS7Ez\ntIdpVpXlMIbk4mbpviRTF4MNKX3P42bJbib8ir4CUqN3VA7OXjm29RmGefbgg1ai\nJAXGOYivY+xJbB8WZZdpqLKJqFelGYHogUJYNy1ecHumOPJG6MwFBijpb06OVo//\nHj2AcTPwc4dwX1uLz+EGV0x7AgubDtF8t0mOHW6LbomWOL6xeLZz7qSbmm+HzczV\nBmXiYttVQbnBYUNTCvLa3p6wsMgaPIpsujv5D1iM1UVUyLuwQSOq+gUCphnc4LMF\n+bGwwTnHAgMBAAECggEAD91nzBL14grgzALykZznhdYTWMyI8ow2zmfH/D6EYUZC\nUqgsnHQpxV8IJRNQbWS/aibP95Lr9JkqT92XikRo5mo5Fsx/hCeoVFKn3P66/Pmw\nXbrfJEvu0/Voh6LrK2UqBcwoxzmalrHrQTK6uOAPV2pXKWNiqk3qlGKuNdwKmf3B\nvJZgc/dUsj2rp4dWCAhRwKNqbNzKj2xORx0xjS28LtOJblkHyq/9S+RkLrafePHg\nfgBPJ4qF89sYvXp9TwAr16ZWIvvz6xo087ELfmhQyXLR+BTIkZUZzWrR70sRMwBG\nWhsvxmZNzrWyNfJ4O2c8cMvwkN9UDP5LNSi7bhjwQQKBgQDkTvvAk95PuGVQdFca\nJlzgW7x7JEtLRlyKQWvkUkvpLaDSPbjT1S7mXZan5Ns492SMe3UaUjQJugDBf9cw\nww94WBw/gGH5MpUp2leJadTTgSvfITfUFz1yOQVh563O+v2IBT059GxQAFhJTta1\nphEHZRofmtgUeSKDygE11U0tpwKBgQC9c4LAU/GaWUrc+Duej9q6kx285qlZZKlW\nrYC7rJ+oI4FrHMyp2qFpllHmWAzsTLsbmd10kkMr9atCOhsvEg0JsyGiwuQb8yOe\nLsqvIfnRNXAow3DeVTN1B3Xn/aCq8aQKt38gSX2K+1lHL1N4ElBVDDWE+bfVq0O0\nb66tT3pW4QKBgQDEydOz3YDMxEsHuw/s6U460Le4iMMhogdX4CYISmtGFN8++Jac\neG+Rfu/BzcCr7InNkQiR5HMYQywtnWy1ihyGhaPrlFRegJwT1DCJsCATIo7XKAHA\nHTwIfV/HUPP+qVbo7GMm1iiaGIIAxiTJs9ePwTRwM362vubiI7dBWJbKlwKBgHMC\nMYjiLNRfipP0WfUbLVSARNhNStdKxYYqE/FajR28WC+XLyOZ5s07hQKJx2aX+ip6\nULcYp5CDNfEhZyk/Ew0lYrD1ERdqld/MVhzVSlvXzfvhEZ7XKELOQaSREr1TrhsX\nZCRMmNsLVRpiv5AvxfarT74m/pPGwXZDKk5p5kHhAoGBAJsHH+TJ0hnfOSZfskBN\nuV08mnnnbb2gxJJyo4ISOfvyxAhqfvSiNTqLp2uXSIWJurldCFKPW4UadUDUzjMj\n9douxVVkkrMLRcgPBFO88s5Wr7BiDies3OHbK3o17nLAXfIv29hHcGBlBp4Mrk7g\n9s6PPSiwARZMrdwsh46Cqe9g\n-----END PRIVATE KEY-----\n",
+  "client_email": "country-data-service@country-data-project-485122.iam.gserviceaccount.com",
+  "client_id": "112881114203209440389",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/country-data-service%40country-data-project-485122.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
