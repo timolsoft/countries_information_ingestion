@@ -14,6 +14,15 @@ Travel agencies rely on accurate geographical and cultural information to recomm
 ## Data Source
 The data is sourced from a REST API https://restcountries.com/v3.1/all
 
+# Data Cleaning and Transformation
+Several Data Cleaning and transformations were applied to ensure usability and data quality:
+* Flattened nested JSON structures
+* Concatenated IDD Root and Suffix to form country calling codes
+* Normalized multi-value fields such as languages and continents
+* Handled missing/null values
+* Standardized column naming conventions
+* Converted list-based attributes into analytical-friendly format
+
 ## Tech Stack
 * Python - Programming
 * Requests API - Data Extraction
