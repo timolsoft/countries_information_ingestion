@@ -35,6 +35,10 @@ he findings show the two most commonly used currencies in each global region bas
 ### Distribution of Countries across the regions
 Africa has the highest number of countries or territories in the dataset, accounting for 59 countries, which represents 23.6% of the total. The Americas follow with 56 countries (22.4%), while Europe includes 53 countries (21.2%). Asia has 50 countries, making up 20% of the total, showing a fairly balanced distribution among these four major regions. Oceania contains 27 countries, representing 10.8%, which is noticeably lower than the other major regions. The Antarctic region has the fewest, with only 5 territories, accounting for 2% of the dataset. Overall, the distribution shows that most countries are concentrated in Africa, the Americas, Europe, and Asia, while Oceania and Antarctica contain significantly fewer geopolitical entities.
  <img width="359" height="131" alt="image" src="https://github.com/user-attachments/assets/79c1abca-1653-4883-8c67-bf0bd2d722aa" />
+## Least 2 countries with the lowest population for each continents
+<img width="491" height="255" alt="image" src="https://github.com/user-attachments/assets/7ef4dc2b-08a8-4a3b-b0ed-79f4ea03450b" />
+
+
  
 ## Tech Stack
 * Python - Programming
