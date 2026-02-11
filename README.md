@@ -38,6 +38,8 @@ Africa has the highest number of countries or territories in the dataset, accoun
 #### Least 2 countries with the lowest population for each continents
 <img width="491" height="255" alt="image" src="https://github.com/user-attachments/assets/7ef4dc2b-08a8-4a3b-b0ed-79f4ea03450b" />
 
+#### Top 5 countries with the largest Area
+<img width="407" height="118" alt="image" src="https://github.com/user-attachments/assets/ed8304fa-b384-4e34-add8-982156038fcc" />
 
  
 ## Tech Stack
