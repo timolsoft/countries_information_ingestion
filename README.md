@@ -14,6 +14,9 @@ Travel agencies rely on accurate geographical and cultural information to recomm
 ## Data Source
 The data is sourced from a REST API https://restcountries.com/v3.1/all
 
+## Data Architecture
+<img width="631" height="251" alt="image" src="https://github.com/user-attachments/assets/4f875fcb-f724-431d-bc66-64fa80f79a86" />
+
 # Data Cleaning and Transformation
 The following transformations were applied to the dataset to clean and standardize the country information:
 Several columns contained list-like string values with brackets and quotes. These were converted to clean string values by removing unnecessary characters.
