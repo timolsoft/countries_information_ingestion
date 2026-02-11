@@ -40,8 +40,11 @@ Africa has the highest number of countries or territories in the dataset, accoun
 
 #### Top 5 countries with the largest Area
 <img width="407" height="118" alt="image" src="https://github.com/user-attachments/assets/ed8304fa-b384-4e34-add8-982156038fcc" />
+#### Countries with 2 or more official languages
+ <img width="149" height="41" alt="image" src="https://github.com/user-attachments/assets/e0d38835-c4e8-4f69-98d9-7bbca93f43da" />
+#### Number of Countries whose start of week are not Monday
+<img width="184" height="38" alt="image" src="https://github.com/user-attachments/assets/53f0a43b-1476-4136-9b8f-617b9f03a412" />
 
- 
 ## Tech Stack
 * Python - Programming
 * Requests API - Data Extraction
