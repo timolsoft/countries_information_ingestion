@@ -15,16 +15,18 @@ Travel agencies rely on accurate geographical and cultural information to recomm
 The data is sourced from a REST API https://restcountries.com/v3.1/all
 
 # Data Cleaning and Transformation
-Several Data Cleaning and transformations were applied to ensure usability and data quality:
-* Flattened nested JSON structures
-* Concatenated IDD Root and Suffix to form country calling codes
-* Normalized multi-value fields such as languages and continents
-* Handled missing/null values
-* Standardized column naming conventions
-* Converted list-based attributes into analytical-friendly format
-
+The following transformations were applied to the dataset to clean and standardize the country information:
+Several columns contained list-like string values with brackets and quotes. These were converted to clean string values by removing unnecessary characters.
+* currencyCode was converted to string and removed brackets and single quotes.
+* capital was converted to string and removed brackets, single quotes, and double quotes.
+* continents was converted to string and removed brackets and single quotes.
+* iddSuffixes was converted to string and removed brackets and single quotes.
+* concatenate iddRoot and iddSuffixes into a single column called idd.
+* dropped the original iddRoot and iddSuffixes columns after concatenation.
+* Created a new column countryId using the dataframe index, starting from 1.
+  
 ## Tech Stack
 * Python - Programming
 * Requests API - Data Extraction
-* BigQuery - Data wharehouse
+* BigQuery - Database/Data wharehouse
 * Github - Version control
