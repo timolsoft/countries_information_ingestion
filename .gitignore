@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment
+venv/
+env/
+.env
+
+# pytest
+.pytest_cache/
+*.pytest_cache
+
+# GCP credentials - NEVER commit this
+*.json
+
+# Airflow logs
+airflow/logs/
+
+# OS files
+.DS_Store
+Thumbs.db
