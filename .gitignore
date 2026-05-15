@@ -23,3 +23,6 @@ airflow/logs/
 # OS files
 .DS_Store
 Thumbs.db
+# Airflow
+airflow/logs/
+airflow/plugins/
