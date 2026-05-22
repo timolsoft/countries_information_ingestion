@@ -4,6 +4,10 @@ import pandas as pd
 from google.cloud import storage, bigquery
 from google.api_core.exceptions import Conflict
 from extract import extract_country_field1, extract_country_field2
+from google.cloud import secretmanager
+from google.oauth2 import service_account
+import json
+
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -35,7 +39,28 @@ COUNTRY_SCHEMA = [
     bigquery.SchemaField("population",     "INTEGER",  mode="NULLABLE"),
     bigquery.SchemaField("continents",     "STRING",   mode="NULLABLE"),
 ]
-
+def get_credentials_from_secret(secret_name: str, project_id: str):
+    """
+    Fetches service account credentials from GCP Secret Manager.
+    Falls back to default credentials if secret fetch fails.
+    This means local development still works with the key file,
+    and production uses Secret Manager.
+    """
+    try:
+        client = secretmanager.SecretManagerServiceClient()
+        name = f"projects/{project_id}/secrets/{secret_name}/versions/latest"
+        response = client.access_secret_version(request={"name": name})
+        secret_json = response.payload.data.decode("UTF-8")
+        credentials_info = json.loads(secret_json)
+        credentials = service_account.Credentials.from_service_account_info(
+            credentials_info,
+            scopes=["https://www.googleapis.com/auth/cloud-platform"]
+        )
+        logger.info("Credentials loaded from Secret Manager.")
+        return credentials
+    except Exception as e:
+        logger.warning("Could not fetch from Secret Manager: %s. Using default credentials.", e)
+        return None
 
 def ensure_bucket(project_id: str) -> None:
     """Creates the GCS bucket if it does not already exist."""
@@ -106,14 +131,22 @@ def load_to_bigquery(client: bigquery.Client, df: pd.DataFrame, table_id: str) -
 
 
 if __name__ == "__main__":
-    bq_client = bigquery.Client()
+    PROJECT_ID = "country-data-project-485122"
+    
+    # Try to get credentials from Secret Manager
+    credentials = get_credentials_from_secret("country-data-gcp-key", PROJECT_ID)
+    
+    # Pass credentials to clients — if None, uses default (key file)
+    bq_client = bigquery.Client(project=PROJECT_ID, credentials=credentials)
+    storage_client = storage.Client(project=PROJECT_ID, credentials=credentials)
+    
     project_id = bq_client.project
     dataset_id = f"{project_id}.{DATASET_NAME}"
     table_id = f"{dataset_id}.{TABLE_NAME}"
 
     ensure_bucket(project_id)
+    ensure_dataset(bq_client, dataset_id)
 
-    logger.info("Extracting data...")
     data1 = extract_country_field1()
     data2 = extract_country_field2()
 
@@ -121,6 +154,4 @@ if __name__ == "__main__":
         raise SystemExit(1)
 
     country_df = build_country_dataframe(data1, data2)
-
-    ensure_dataset(bq_client, dataset_id)
     load_to_bigquery(bq_client, country_df, table_id)
