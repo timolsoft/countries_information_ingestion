@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: staging
+    database: country-data-project-485122
+    schema: staging
+    tables:
+      - name: country_data
+        description: "Raw country data loaded from REST Countries API"
+        columns:
+          - name: countryId
+            description: "Surrogate key"
+          - name: commonName
+            description: "Common country name"
+          - name: region
+            description: "Geographic region"
+          - name: population
+            description: "Country population"
+          - name: area
+            description: "Country area in km²"

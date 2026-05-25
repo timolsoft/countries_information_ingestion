@@ -1,0 +1,75 @@
+version: 2
+
+models:
+  - name: fact_country
+    description: "Central fact table with population and area metrics"
+    columns:
+      - name: countryId
+        description: "Surrogate key"
+        tests:
+          - unique
+          - not_null
+      - name: regionId
+        description: "Foreign key to dim_region"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_region')
+              field: regionId
+      - name: population
+        description: "Country population"
+        tests:
+          - not_null
+      - name: area
+        description: "Country area in km2"
+        tests:
+          - not_null
+
+  - name: dim_region
+    description: "Region and continent dimension"
+    columns:
+      - name: regionId
+        tests:
+          - unique
+          - not_null
+      - name: region
+        tests:
+          - not_null
+      - name: continent
+        tests:
+          - not_null
+
+  - name: dim_currency
+    description: "Currency dimension"
+    columns:
+      - name: currencyId
+        tests:
+          - unique
+          - not_null
+      - name: currencyCode
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_geography
+    description: "Country identity and descriptive attributes"
+    columns:
+      - name: countryId
+        tests:
+          - unique
+          - not_null
+      - name: commonName
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_language
+    description: "One row per language per country"
+    columns:
+      - name: languageId
+        tests:
+          - unique
+          - not_null
+      - name: countryId
+        tests:
+          - not_null
